@@ -4,10 +4,8 @@ import { useSelector } from "react-redux";
 
 export default function Counter(){
 
- const count = useSelector(state => {
-    return state.counter.count
- })
-  
+ const count = useSelector(state => state.counter.count)
+    
   return (
     <div>
         <h1>Count is {count}</h1>
