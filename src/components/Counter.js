@@ -2,7 +2,7 @@ import { useState } from "react";
 import Counter2 from "./Counter2";
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
-import { decrement, increment } from "./redux/counterSlice";
+import { decrement, increment, incrementByAmount } from "./redux/counterSlice";
 
 export default function Counter(){
 
@@ -25,6 +25,13 @@ export default function Counter(){
          >
             Decrement
         </button>
+
+        <button
+          onClick={() => dispatch(incrementByAmount(20)) }
+
+        >
+            Increment by Amount
+      </button>
    </div>
   );
 }
